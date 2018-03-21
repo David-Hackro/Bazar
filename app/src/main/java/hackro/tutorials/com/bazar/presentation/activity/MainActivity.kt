@@ -1,7 +1,8 @@
-package hackro.tutorials.com.bazar
+package hackro.tutorials.com.bazar.presentation.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import hackro.tutorials.com.bazar.R
 
 class MainActivity : AppCompatActivity() {
 

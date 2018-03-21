@@ -1,4 +1,4 @@
-package hackro.tutorials.com.bazar
+package hackro.tutorials.com.bazar.presentation
 
 import android.app.Application
 import android.content.Context

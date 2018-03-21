@@ -1,4 +1,4 @@
-package hackro.tutorials.com.bazar
+package hackro.tutorials.com.bazar.presentation.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

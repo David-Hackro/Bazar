@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">bazar</string>
+
+    <string name="text_error_general">Ha ocurrido una incidencia</string>
+    <string name="text_error_support">Hemos tenido una incidencia,pero puedes comunicarte con nosotros para obtener una solucion</string>
+    <string name="text_error_try_again">Intenta Nuevamente</string>
+    <string name="text_error_conection_internet">No Hay Conexion a Internet</string>
+    <string name="text_error_unexpected">Vaya! estamos experimentando dificultades;Intentalo mas tarde</string>
 </resources>
