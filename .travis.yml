@@ -1,0 +1,14 @@
+language: android
+jdk: oraclejdk8
+sudo: false
+
+notifications:  #Optional
+    email:
+        - hackro91@gmail.com #Add your email address
+
+    env:
+      matrix:
+        - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+        - ANDROID_TARGET=android-21 ANDROID_ABI=armeabi-v7a
+      global:   #Optional
+        - ADB_INSTALL_TIMEOUT=10    #Time out to 10 mins
