@@ -10,13 +10,14 @@ import javax.inject.Inject
  */
 class GetPostFB {
 
-    private lateinit var appRepository : AppRepository
+  private lateinit var appRepository: AppRepository
 
+  @Inject constructor(@NonNull appRepository: AppRepository) {
+    this.appRepository = appRepository
+  }
 
-    @Inject constructor(@NonNull appRepository: AppRepository) {
-        this.appRepository = appRepository
-    }
-
-    fun buildObservableUseCase(): Observable<*> {return appRepository.getPostsFB() }
+  fun buildObservableUseCase(): Observable<*> {
+    return appRepository.getPostsFB()
+  }
 
 }

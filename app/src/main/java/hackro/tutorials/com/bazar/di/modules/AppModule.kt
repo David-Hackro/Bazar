@@ -9,7 +9,10 @@ import javax.inject.Singleton
  * Created by macbookpro on 20/03/18.
  */
 
-@Module class  AppModule(var application: Application) {
+@Module
+class AppModule(var application: Application) {
 
-    @Singleton @Provides fun providesApplication():Application{return application}
+  @Singleton @Provides fun providesApplication(): Application {
+    return application
+  }
 }

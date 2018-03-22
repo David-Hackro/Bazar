@@ -6,12 +6,12 @@ import java.util.ArrayList
 
 class Response {
 
-    @SerializedName("errors")
-    var errors: ArrayList<Errors>? = null
+  @SerializedName("errors")
+  var errors: ArrayList<Errors>? = null
 
-    constructor() {}
+  constructor() {}
 
-    constructor(errors: ArrayList<Errors>) {
-        this.errors = errors
-    }
+  constructor(errors: ArrayList<Errors>) {
+    this.errors = errors
+  }
 }

@@ -9,10 +9,10 @@ import rx.Observable
  */
 class AppRepository : DataSource {
 
-    private lateinit var remoteData: AppRemoteData
+  private lateinit var remoteData: AppRemoteData
 
-    override fun getPostsFB(): Observable<ResponseListPost> {
-        return remoteData.getPostsFB()
-    }
+  override fun getPostsFB(): Observable<ResponseListPost> {
+    return remoteData.getPostsFB()
+  }
 
 }

@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 class Errors {
 
-    @SerializedName("code")
-    var code: Int = 0
+  @SerializedName("code")
+  var code: Int = 0
 
-    @SerializedName("message")
-    var message: String? = null
+  @SerializedName("message")
+  var message: String? = null
 }
