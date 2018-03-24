@@ -8,7 +8,7 @@ import javax.inject.Inject
 /**
  * Created by macbookpro on 20/03/18.
  */
-class GetPostFB {
+class GetPostFB : UseCase{
 
   private lateinit var appRepository: AppRepository
 
@@ -16,7 +16,7 @@ class GetPostFB {
     this.appRepository = appRepository
   }
 
-  fun buildObservableUseCase(): Observable<*> {
+  override fun buildObservableUseCase(): Observable<*> {
     return appRepository.getPostsFB()
   }
 

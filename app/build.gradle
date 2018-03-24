@@ -52,9 +52,12 @@ dependencies {
     implementation recyclerDependencies.cardview
     implementation rxbindingDependencies.rxbinding
     implementation rxbindingDependencies.rxbindingDesign
+    implementation butterknifeDependencies.butterknife
+
+
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
 
-
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
     kapt 'com.google.dagger:dagger-compiler:2.9'
 
 

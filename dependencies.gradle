@@ -80,6 +80,12 @@ ext{
 
 
 
+    butterknifeVersion = '8.2.1'
+
+
+    butterknifeDependencies = [
+            butterknife :   "com.jakewharton:butterknife:${butterknifeVersion}"
+    ]
 
 
 
