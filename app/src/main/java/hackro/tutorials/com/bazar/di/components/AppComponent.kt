@@ -4,8 +4,9 @@ import dagger.Component
 import hackro.tutorials.com.bazar.di.modules.AppModule
 import hackro.tutorials.com.bazar.di.modules.BazarModule
 import hackro.tutorials.com.bazar.presentation.activity.MainActivity
+import javax.inject.Singleton
 
-@Component(modules = arrayOf(BazarModule::class, AppModule::class))
+@Singleton @Component(modules = arrayOf(BazarModule::class, AppModule::class))
 interface AppComponent {
 
   fun inject(mainActivity: MainActivity)

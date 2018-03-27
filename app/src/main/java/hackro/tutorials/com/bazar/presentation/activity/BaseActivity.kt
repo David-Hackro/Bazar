@@ -2,11 +2,6 @@ package hackro.tutorials.com.bazar.presentation.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import butterknife.ButterKnife
-
-/**
- * Created by macbookpro on 19/03/18.
- */
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -23,7 +18,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
 
   fun bindView() {
-    ButterKnife.bind(this)
+    //ButterKnife.bind(this)
   }
 
   abstract fun getLayoutId(): Int

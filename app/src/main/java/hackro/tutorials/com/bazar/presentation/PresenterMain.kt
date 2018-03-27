@@ -1,6 +1,5 @@
 package hackro.tutorials.com.bazar.presentation
 
-import android.support.annotation.NonNull
 import hackro.tutorials.com.bazar.data.model.DataItem
 import hackro.tutorials.com.bazar.data.model.ResponseListPost
 import hackro.tutorials.com.bazar.domain.DefaultSubscriber
@@ -12,9 +11,9 @@ import javax.inject.Inject
  */
 open class PresenterMain : Presenter<PresenterMain.View>{
 
-    private lateinit  var getPostFB: GetPostFB
+    private var getPostFB: GetPostFB
 
-    @Inject constructor(@NonNull getPostFB: GetPostFB) : super() {
+    @Inject constructor(getPostFB: GetPostFB) : super() {
         this.getPostFB = getPostFB
     }
 
@@ -32,30 +31,27 @@ open class PresenterMain : Presenter<PresenterMain.View>{
     inner class getPostFbFromObserver : DefaultSubscriber<ResponseListPost>() {
         override fun onCompleted() {
             super.onCompleted()
+            getView().hideLoading()
         }
 
         override fun onError(e: Throwable) {
             super.onError(e)
+            getView().hideLoading()
+            getView().showError(e.message.toString())
 
         }
 
         override fun onNext(response: ResponseListPost) {
             super.onNext(response)
-
-            getView()!!.showListPostFb(response.data)
+            getView().showListPostFb(response.data)
         }
     }
 
 
-    override fun setView(view: View) {
-        super.setView(view)
-    }
+    override fun setView(view: View) { super.setView(view) }
 
-    override fun getView(): View? {
-        return super.getView()
-    }
 
-    open interface View : Presenter.View {
+    interface View : Presenter.View {
         fun showListPostFb(list: List<DataItem?>?)
     }
 

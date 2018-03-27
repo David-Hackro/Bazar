@@ -9,5 +9,5 @@ import rx.Observable
  */
 interface BazarServices {
 
-  @GET("") fun getPostsFB(): Observable<ResponseListPost>
+  @GET("getpostsfb") fun getPostsFB(): Observable<ResponseListPost>
 }

@@ -2,19 +2,13 @@ package hackro.tutorials.com.bazar.presentation
 
 open class Presenter<T : Presenter.View> {
 
-    private var view: T? = null
+    private lateinit var view: T
 
-    open fun setView(view: T) {
-        this.view = view
-    }
+    open fun setView(view: T) { this.view = view }
 
-    open fun getView(): T? {
-        return view
-    }
+    open fun getView(): T { return view }
 
-    open fun initialize() {
-
-    }
+    open fun initialize() {}
 
     interface View {
 

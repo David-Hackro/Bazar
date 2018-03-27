@@ -4,8 +4,6 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-
-
 apply plugin: 'kotlin-android-extensions'
 apply from: './code_quality_tools/quality.gradle'
 
@@ -39,7 +37,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     /*new dependencies*/
-    implementation glideDependencies.glide
+    //implementation glideDependencies.glide
     implementation googleDependecies.gson
     implementation retrofitDependencies.retrofit
     implementation retrofitDependencies.adapter
@@ -52,12 +50,12 @@ dependencies {
     implementation recyclerDependencies.cardview
     implementation rxbindingDependencies.rxbinding
     implementation rxbindingDependencies.rxbindingDesign
-    implementation butterknifeDependencies.butterknife
+    //implementation butterknifeDependencies.butterknife
 
 
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
 
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
+    //annotationProcessor 'com.jakewharton:butterknife-compiler:8.2.1'
     kapt 'com.google.dagger:dagger-compiler:2.9'
 
 

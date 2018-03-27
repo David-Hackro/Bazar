@@ -45,7 +45,7 @@ class BazarModule {
     return Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-        .baseUrl("")
+        .baseUrl("https://androidtutorials.herokuapp.com/")
         .client(okHttpClient)
         .build()
   }

@@ -12,7 +12,7 @@ class GetPostFB : UseCase{
 
   private lateinit var appRepository: AppRepository
 
-  @Inject constructor(@NonNull appRepository: AppRepository) {
+  @Inject constructor(appRepository: AppRepository) {
     this.appRepository = appRepository
   }
 
