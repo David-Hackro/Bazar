@@ -30,7 +30,7 @@ class MainActivity : BaseActivity(),PresenterMain.View{
   }
 
   fun initRecycler(){
-    lLayout = GridLayoutManager(this, 1)
+    lLayout = GridLayoutManager(this, 2)
     list_post.setLayoutManager(lLayout)
     list_post.setAdapter(postAdapter)
   }
