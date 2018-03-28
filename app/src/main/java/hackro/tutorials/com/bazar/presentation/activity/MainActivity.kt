@@ -8,11 +8,17 @@ import hackro.tutorials.com.bazar.presentation.BazarApplication
 import hackro.tutorials.com.bazar.presentation.PresenterMain
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
+import android.support.v7.widget.StaggeredGridLayoutManager
+
+
+
+
 
 class MainActivity : BaseActivity(),PresenterMain.View{
 
   private lateinit var postAdapter : PostsAdapter
   private lateinit var lLayout: GridLayoutManager
+  private var gaggeredGridLayoutManager: StaggeredGridLayoutManager? = null
   @Inject lateinit var presenter: PresenterMain
 
   override  fun initView (){
@@ -30,8 +36,10 @@ class MainActivity : BaseActivity(),PresenterMain.View{
   }
 
   fun initRecycler(){
+    gaggeredGridLayoutManager  = StaggeredGridLayoutManager(2, 1)
+
     lLayout = GridLayoutManager(this, 2)
-    list_post.setLayoutManager(lLayout)
+    list_post.setLayoutManager(gaggeredGridLayoutManager)
     list_post.setAdapter(postAdapter)
   }
 
