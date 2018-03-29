@@ -10,6 +10,7 @@ import hackro.tutorials.com.bazar.R
 import hackro.tutorials.com.bazar.data.model.DataItem
 import hackro.tutorials.com.bazar.presentation.PresenterMain
 import android.graphics.Typeface
+import android.util.Log
 import hackro.tutorials.com.bazar.presentation.Utils
 
 
@@ -19,6 +20,7 @@ internal class PostViewHolder(view: View, private val presenter: PresenterMain) 
     private  var datePost : TextView
     private  var txtTitle : TextView
     //private  var txtDescription : TextView
+    private  var txtPrice : TextView
     private var utils : Utils
 
     init {
@@ -26,6 +28,7 @@ internal class PostViewHolder(view: View, private val presenter: PresenterMain) 
         product= itemView.findViewById(R.id.icon_product)
         datePost = itemView.findViewById(R.id.txt_date)
         txtTitle = itemView.findViewById(R.id.txt_title)
+        txtPrice = itemView.findViewById(R.id.txt_price)
         //txtDescription = itemView.findViewById(R.id.txt_description)
     }
 
@@ -33,8 +36,25 @@ internal class PostViewHolder(view: View, private val presenter: PresenterMain) 
         renderMainPhoto(dataItem.fullPicture)
         renderCreatedTime(dataItem.createdTime!!)
         renderName(dataItem.name)
+        if(dataItem.message!=null){
+            renderTitle(utils.getTitle(dataItem.message!!))
+            renderPrice(utils.getPrice(dataItem.message))
+            renderLocalitation(utils.getLocalitation(dataItem.message))
+            renderDescription(utils.getDescription(dataItem.message))
+        }
 
-        renderDescription(dataItem.description)
+    }
+
+    private fun renderLocalitation(localitation: String) {}
+
+    private fun renderPrice(price: String) {
+
+        txtPrice.text = price
+    }
+
+    private fun renderTitle(title: String) {
+        Log.e("titlos:",title)
+        txtTitle.text = title
     }
 
     private fun renderDescription(description: String?) {

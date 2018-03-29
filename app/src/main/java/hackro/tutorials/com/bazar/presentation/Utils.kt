@@ -35,4 +35,58 @@ open class  Utils{
     }
 
 
+
+   open fun getTitle(text: String): String {
+
+
+       /* --------------------------------*/
+       try {
+
+           var parts = text.split("\n$")
+
+           return parts[0]
+
+       } catch (e: Exception) {
+           return ""
+       }
+    }
+
+   open fun getPrice(text: String): String {
+        try {
+
+            var parts = text.split("\$", " - ")
+
+            return "$"+parts[1]
+
+        } catch (e: Exception) {
+            return ""
+        }
+
+    }
+
+
+    fun getLocalitation(text: String): String {
+        try {
+
+            var parts = text.split(" - ", "\\n\\n")
+
+            return parts[1]
+
+        } catch (e: Exception) {
+            return ""
+        }
+    }
+
+
+    open fun getDescription(text: String): String {
+        try {
+            var parts = text.split("\\n\\n")
+
+            return parts[1]
+        } catch (e: Exception) {
+            return ""
+        }
+
+    }
+
 }

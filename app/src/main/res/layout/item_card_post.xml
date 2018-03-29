@@ -25,13 +25,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:srcCompat="@mipmap/like"/>
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/txt_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="$768"
             android:shadowColor="@color/text_shadow"
             android:shadowDx="2"
             android:shadowDy="4"
@@ -39,9 +38,8 @@
             android:textColor="@color/colorPrice"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/icon_product"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.947"
+            app:layout_constraintBottom_toTopOf="@+id/txt_date"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.926"
             app:layout_constraintStart_toStartOf="parent"/>
         <TextView
             android:id="@+id/txt_title"
@@ -65,18 +63,18 @@
         <TextView
             android:id="@+id/txt_date"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
-            android:text="Hace 2 Horas"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:shadowColor="@color/text_shadow"
             android:shadowDx="2"
             android:shadowDy="4"
-            android:textSize="16sp"
             android:shadowRadius="2"
+            android:text="Hace 2 Horas"
             android:textColor="@color/light_font"
-            app:layout_constraintBottom_toTopOf="@+id/textView7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.969"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/txt_title"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.969"
             app:layout_constraintStart_toStartOf="parent"/>
 
     </android.support.constraint.ConstraintLayout>
