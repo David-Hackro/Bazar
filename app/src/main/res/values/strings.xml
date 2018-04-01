@@ -6,4 +6,8 @@
     <string name="text_error_try_again">Intenta Nuevamente</string>
     <string name="text_error_conection_internet">No Hay Conexion a Internet</string>
     <string name="text_error_unexpected">Vaya! estamos experimentando dificultades;Intentalo mas tarde</string>
+
+
+    <!-- Toolbar-->
+    <string name="txt_hint_search">Busca autos,celulares,laptop y mas...</string>
 </resources>

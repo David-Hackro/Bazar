@@ -44,6 +44,10 @@ open class  Utils{
 
            var parts = text.split("\n$")
 
+           if(parts.isEmpty()){
+               parts = text.split("\\n$")
+           }
+
            return parts[0]
 
        } catch (e: Exception) {
