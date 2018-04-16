@@ -53,6 +53,11 @@ open class PresenterMain : Presenter<PresenterMain.View>{
 
     interface View : Presenter.View {
         fun showListPostFb(list: List<DataItem?>?)
+        fun showDetailItem(dataItem: DataItem) {}
     }
 
+    fun onItemOnClick(dataItem: DataItem) {
+        getView().showDetailItem(dataItem)
     }
+
+}

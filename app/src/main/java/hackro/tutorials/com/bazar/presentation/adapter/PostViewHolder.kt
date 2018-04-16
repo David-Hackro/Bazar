@@ -33,11 +33,12 @@ internal class PostViewHolder(view: View, private val presenter: PresenterMain) 
     }
 
     fun render(dataItem: DataItem) {
+        onItemOnClick(dataItem)
         renderMainPhoto(dataItem.fullPicture)
         renderCreatedTime(dataItem.createdTime!!)
         renderName(dataItem.name)
         if(dataItem.message!=null){
-            renderTitle(utils.getTitle(dataItem.message!!))
+            renderTitle(utils.getTitle(dataItem.message))
             renderPrice(utils.getPrice(dataItem.message))
             renderLocalitation(utils.getLocalitation(dataItem.message))
             renderDescription(utils.getDescription(dataItem.message))
@@ -82,6 +83,10 @@ internal class PostViewHolder(view: View, private val presenter: PresenterMain) 
 
     private fun getContext(): Context {
         return itemView.context
+    }
+
+    private fun onItemOnClick(dataItem: DataItem) {
+        itemView.setOnClickListener { presenter.onItemOnClick(dataItem) }
     }
 
 

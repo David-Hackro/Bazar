@@ -9,6 +9,9 @@ import hackro.tutorials.com.bazar.presentation.PresenterMain
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.content.Intent
+
+
 
 
 
@@ -69,5 +72,16 @@ class MainActivity : BaseActivity(),PresenterMain.View{
   }
 
   override fun showError(message: String) {
+  }
+
+  override fun showDetailItem(dataItem: DataItem) {
+    super.showDetailItem(dataItem)
+    val intent = Intent(this, DetailItemActivity::class.java)
+
+    //intent.putExtra("keyIdentifier", value)
+
+    startActivity(intent)
+
+
   }
 }
