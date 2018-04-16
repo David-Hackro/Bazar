@@ -1,4 +1,4 @@
-package hackro.tutorials.com.bazar.presentation
+package hackro.tutorials.com.bazar.presentation.presenter
 
 import hackro.tutorials.com.bazar.data.model.DataItem
 import hackro.tutorials.com.bazar.data.model.ResponseListPost
@@ -9,7 +9,7 @@ import javax.inject.Inject
 /**
  * Created by macbookpro on 21/03/18.
  */
-open class PresenterMain : Presenter<PresenterMain.View>{
+open class PresenterMain : Presenter<PresenterMain.View> {
 
     private var getPostFB: GetPostFB
 

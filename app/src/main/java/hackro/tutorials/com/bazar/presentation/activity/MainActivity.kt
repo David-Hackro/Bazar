@@ -5,7 +5,7 @@ import com.reservamos.viajes.presentation.adapter.providersDetail.PostsAdapter
 import hackro.tutorials.com.bazar.R
 import hackro.tutorials.com.bazar.data.model.DataItem
 import hackro.tutorials.com.bazar.presentation.BazarApplication
-import hackro.tutorials.com.bazar.presentation.PresenterMain
+import hackro.tutorials.com.bazar.presentation.presenter.PresenterMain
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 import android.support.v7.widget.StaggeredGridLayoutManager
@@ -17,7 +17,7 @@ import android.content.Intent
 
 
 
-class MainActivity : BaseActivity(),PresenterMain.View{
+class MainActivity : BaseActivity(), PresenterMain.View{
 
   private lateinit var postAdapter : PostsAdapter
   private lateinit var lLayout: GridLayoutManager

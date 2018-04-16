@@ -1,4 +1,4 @@
-package hackro.tutorials.com.bazar.presentation
+package hackro.tutorials.com.bazar.presentation.presenter
 
 open class Presenter<T : Presenter.View> {
 

@@ -8,8 +8,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import hackro.tutorials.com.bazar.R
 import hackro.tutorials.com.bazar.data.model.DataItem
-import hackro.tutorials.com.bazar.presentation.PresenterMain
-import android.graphics.Typeface
+import hackro.tutorials.com.bazar.presentation.presenter.PresenterMain
 import android.util.Log
 import hackro.tutorials.com.bazar.presentation.Utils
 

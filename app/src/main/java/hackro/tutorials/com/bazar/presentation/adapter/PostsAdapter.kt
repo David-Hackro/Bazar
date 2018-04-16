@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import hackro.tutorials.com.bazar.R
 
 import hackro.tutorials.com.bazar.data.model.DataItem
-import hackro.tutorials.com.bazar.presentation.PresenterMain
+import hackro.tutorials.com.bazar.presentation.presenter.PresenterMain
 
 open class PostsAdapter(var presenter  : PresenterMain) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
