@@ -13,10 +13,10 @@
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/example"/>
     <ImageView
         android:id="@+id/imageView4"
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="309dp"/>
+        tools:layout_editor_absoluteY="281dp"/>
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
