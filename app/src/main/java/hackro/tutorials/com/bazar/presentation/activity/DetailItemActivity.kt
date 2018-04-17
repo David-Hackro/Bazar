@@ -9,15 +9,13 @@ import hackro.tutorials.com.bazar.presentation.presenter.PresenterDetailItem
 import kotlinx.android.synthetic.main.activity_detail_item.*
 import javax.inject.Inject
 import android.support.v7.widget.LinearLayoutManager
-
-
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class DetailItemActivity : BaseActivity(), PresenterDetailItem.View{
 
-
     private lateinit var imageAdapter : ImageAdapter
     lateinit var lLayout  : LinearLayoutManager
-    private var gaggeredGridLayoutManager: StaggeredGridLayoutManager? = null
 
     @Inject lateinit var presenter : PresenterDetailItem
 
@@ -27,8 +25,13 @@ class DetailItemActivity : BaseActivity(), PresenterDetailItem.View{
         initializePresenter()
         initAdapter()
         initRecycler()
+        hideToolbar()
         presenter.initialize()
 
+    }
+
+    private fun hideToolbar() {
+        getSupportActionBar()!!.hide()
     }
 
 
@@ -73,6 +76,10 @@ class DetailItemActivity : BaseActivity(), PresenterDetailItem.View{
 
     override fun showImages(listImages: List<String>) {
         imageAdapter.addListImages(listImages)
+    }
+
+    override fun showImageProfile(url: String) {
+        Glide.with(this).load(url).apply(RequestOptions.circleCropTransform()).into(img_profile);
     }
 
 }
